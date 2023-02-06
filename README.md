@@ -1,3 +1,3 @@
-# Tibbles_v1
+# Tibbles - A Timetable Management System
 
 TIBBLES is a Timetable Generator Management System that enables educational institutions to generate and manage their class schedules efficiently. The system is designed to streamline the process of class schedule generation and management, providing administrators with tools to create, organize, and manage class schedules, assign teachers to courses, and make real-time adjustments as needed. The user-friendly interface allows the staff to access and view their schedules, as well as enter subject and time preferences. The system's optimized timetable generation process helps to mitigate scheduling clashes and ensure an ideal timetable. The database management system also enables the efficient storage, retrieval, and management of class schedule data, including class times, subjects, teachers, and more. Additionally, the system offers robust reporting capabilities to meet the diverse needs of the institution.
