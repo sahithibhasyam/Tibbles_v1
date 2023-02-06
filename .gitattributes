@@ -1,0 +1,8 @@
+*.css linguist-detectable=false
+*.js linguist-detectable=true
+*.java linguist-detectable=false
+*.py    linguist-detectable=true
+
+# Django static files
+static/    linguist-ignored
+media/     linguist-ignored
