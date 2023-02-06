@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        </title></title>
+    </head>
+    <body>
+        <left> {{datetime}}</left>
+    <center>
+        <h1>TIBBLES</h1>
+        <h2>Timetable for 3rd sem and 5th sem AIML department</h2>
+        </hr>
+        <h2>3rd semester</h2>
+        <br>
+        <table border = "1.5">
+            <tr style="height:50px">
+                <th>Day</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr >
+            {% for displaydata in displaydata3%}
+            <tr style="height:50px">
+                <td>{{displaydata.0}}</td>
+                <td>{{displaydata.1}}</td>
+                <td>{{displaydata.2}}</td>
+                <td>{{displaydata.3}}</td>
+                <td>{{displaydata.4}}</td> 
+                <td>{{displaydata.5}}</td>  
+                <td>{{displaydata.6}}</td> 
+                <td>{{displaydata.7}}</td> 
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <br>
+        <table border = "1.5">
+            <tr style="height:25px">
+                <th>Subject</th>
+                <th>Subject Code</th>
+                <th>Faculty</th>
+            </tr>
+            {% for displaydata in displaydata7%}
+            <tr style="height:25px">
+                <td>{{displaydata.0}}</td>
+                <td>{{displaydata.1}}</td>
+                <td>{{displaydata.2}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>5th semester</h2>
+        <br>
+        <table border = "1.5">
+            <tr style="height:50px">
+                <th>Day</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+            {% for displaydata in displaydata5%}
+            <tr style="height:50px">
+                <td>{{displaydata.0}}</td>
+                <td>{{displaydata.1}}</td>
+                <td>{{displaydata.2}}</td>
+                <td>{{displaydata.3}}</td>
+                <td>{{displaydata.4}}</td> 
+                <td>{{displaydata.5}}</td>  
+                <td>{{displaydata.6}}</td> 
+                <td>{{displaydata.7}}</td> 
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <br>
+        <table border = "1.5">
+            <tr style="height:25px">
+                <th>Subject</th>
+                <th>Subject Code</th>
+                <th>Faculty</th>
+            </tr>
+            {% for displaydata in displaydata9%}
+            <tr style="height:25px">
+                <td>{{displaydata.0}}</td>
+                <td>{{displaydata.1}}</td>
+                <td>{{displaydata.2}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+    </body>
+</html>

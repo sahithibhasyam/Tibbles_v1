@@ -1,0 +1,12 @@
+{% extends 'sidenav.html' %}
+
+{% block body %}
+    {% for message in messages %}
+    <div align="center">
+        <section style="width:300px" class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            {{ message }}
+        </section>
+    </div>
+    {% endfor %}
+    <h1 style="padding-top: 270px"> Hello {{request.user.first_name}}</h1>
+{% endblock body %}

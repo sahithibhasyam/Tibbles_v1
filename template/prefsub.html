@@ -1,0 +1,95 @@
+{% extends 'sidenav.html' %}
+{% block body %}
+    <h1>Please enter your Subjects Preferences </h1>
+    {% for message in messages %}
+    <div align="center">
+        <section style="width:300px" class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            {{ message }}
+        </section>
+    </div>
+    {% endfor %}
+    <button style="width:300px"><a style="text-decoration: none" href="/viewsubpref/"> View Your Preferences </a></button>
+    <br>
+        <h5>
+            <ul style="text-align: left">
+                <li>Select the dropdown list to choose the top 3 subjects that you want to teach.</li>
+                <li>You can view your preferences by clicking the button above.</li>
+                <li>It also allows you to update or delete your preferences.</li>
+            </ul>
+        </h5>
+    <div>
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+            <h5> Preference 1:  </h5>
+            <select id="sub" name="pref1">
+                <option value="18CS31">18CS31</option>
+                <option value="18CS32">18CS32</option>
+                <option value="18CS33">18CS33</option>
+                <option value="18CS34">18CS34</option>
+                <option value="18CS35">18CS35</option>
+                <option value="18CS36">18CS36</option>
+                <option value="18CSL37">18CSL37</option>
+                <option value="18CSL38">18CSL38</option>
+                <option value="18KAK39">18KAK39</option>
+                <option value="18KVK39">18KVK39</option>
+                <option value="18CS51">18CS51</option>
+                <option value="18AI52">18AI52</option>
+                <option value="18CS53">18CS53</option>
+                <option value="18CS54">18CS54</option>
+                <option value="18AI55">18AI55</option>
+                <option value="18AI56">18AI56</option>
+                <option value="18AIL57">18AIL57</option>
+                <option value="18CSL58">18CSL58</option>
+                <option value="18CIV59">18CIV59</option>
+            </select>
+            <h5> Preference 2:  </h5>
+            <select id="sub" name="pref2">
+                <option value="18CS31">18CS31</option>
+                <option value="18CS32">18CS32</option>
+                <option value="18CS33">18CS33</option>
+                <option value="18CS34">18CS34</option>
+                <option value="18CS35">18CS35</option>
+                <option value="18CS36">18CS36</option>
+                <option value="18CSL37">18CSL37</option>
+                <option value="18CSL38">18CSL38</option>
+                <option value="18KAK39">18KAK39</option>
+                <option value="18KVK39">18KVK39</option>
+                <option value="18CS51">18CS51</option>
+                <option value="18AI52">18AI52</option>
+                <option value="18CS53">18CS53</option>
+                <option value="18CS54">18CS54</option>
+                <option value="18AI55">18AI55</option>
+                <option value="18AI56">18AI56</option>
+                <option value="18AIL57">18AIL57</option>
+                <option value="18CSL58">18CSL58</option>
+                <option value="18CIV59">18CIV59</option>
+            </select>
+
+            <h5> Preference 3:  </h5>
+            <select id="sub" name="pref3">
+                <option value="18CS31">18CS31</option>
+                <option value="18CS32">18CS32</option>
+                <option value="18CS33">18CS33</option>
+                <option value="18CS34">18CS34</option>
+                <option value="18CS35">18CS35</option>
+                <option value="18CS36">18CS36</option>
+                <option value="18CSL37">18CSL37</option>
+                <option value="18CSL38">18CSL38</option>
+                <option value="18KAK39">18KAK39</option>
+                <option value="18KVK39">18KVK39</option>
+                <option value="18CS51">18CS51</option>
+                <option value="18AI52">18AI52</option>
+                <option value="18CS53">18CS53</option>
+                <option value="18CS54">18CS54</option>
+                <option value="18AI55">18AI55</option>
+                <option value="18AI56">18AI56</option>
+                <option value="18AIL57">18AIL57</option>
+                <option value="18CSL58">18CSL58</option>
+                <option value="18CIV59">18CIV59</option>
+            </select>
+        <br>
+        <button type="submit"> Submit </button><br>
+
+    </form>  
+</div>
+{% endblock body %}

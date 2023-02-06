@@ -1,0 +1,38 @@
+{% extends 'sidenav.html' %}
+
+{% block body %}
+    <h1 class="n"> Hello {{request.user.first_name}}</h1>
+    <br>
+    {% for message in messages %}
+    <div align="center">
+        <section style="width:300px" class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            {{ message }}
+        </section>
+    </div>
+    {% endfor %}
+    <nav>
+        <a style="text-decoration: none" href="/faculty/"><button> Faculty </button></a>
+        <a style="text-decoration: none" href="/subject/"><button> Subjects </button></a>
+        <a style="text-decoration: none" href="/subp/"><button> Faculty Sub Prefs </button></a>
+        <a style="text-decoration: none" href="/slotp/"><button> Faculty Slot Prefs </button></a>
+    </nav>
+    <br>
+    <h5>Faculty Members who have entered their Preferences</h5>
+    <br>
+    <table align="center">
+        <tr>
+            <th> Faculty_Id</th>
+            <th> Faculty Name</th>
+        </tr>
+        {% for p in fp1 %}
+        <tr>
+            <td>{{p.0}}</td>
+            <td>{{p.1}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <button style="width:300px"><a style="text-decoration: none" href="/timetable/"> Generate Your Tibble</a> </button>
+
+{% endblock body %}

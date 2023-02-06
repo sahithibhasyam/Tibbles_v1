@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block mess %}
+    {% for message in messages %}
+    <div class="tibbleslog" style="width: 520px; text-align: center" class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+{% endblock mess %}
+{% block body %}
+        
+    <form class="forms" action="" method="post">
+        <h3>Login Here</h3>
+        {% csrf_token %}
+        <label for="username">Faculty Id</label>
+        <input type="text" name="id" placeholder="Id"><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Password"><br>
+        <button type="submit"> Log In </button>
+    </form>
+    
+{% endblock body %}

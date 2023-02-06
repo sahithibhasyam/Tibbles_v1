@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% for message in messages %}
+    <div align="center">
+        <section style="width:300px" class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            {{ message }}
+        </section>
+    </div>
+    {% endfor %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="username">Faculty Id: </label>
+        <input type="text" name="id"> <br>
+        <label for="name">Name: </label>
+        <input type="text" name="name"> <br>
+        <label for="dept">Department No: </label>
+        <input type="text" name="dept"> <br>
+        <label for="dept">Priority No: </label>
+        <input type="text" name="prio"> <br>
+        <label for="password">Password: </label>
+        <input type="password" name="password"> <br>
+        <label for="password">Confirm Password: </label>
+        <input type="password" name="cp"><br>
+        <button type="submit"> signup </button>
+    </form>
+{% endblock body %}

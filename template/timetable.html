@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        </title></title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Fira+Sans&family=Francois+One&family=Montserrat:wght@500;900&family=Space+Mono:wght@700&display=swap');                
+            body {
+                padding-top: 10px;
+                background-color: black;
+                color: aliceblue;
+                background-image: url('/static/4.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            h1 {
+                width: 130px;
+                font-family: 'Chelsea Market', cursive;
+                font-size: 35px;
+                color: aliceblue;
+                transition: 0.2s;
+            }
+            h1:hover {
+                width:130px;
+                color: transparent;
+                font-size: 35px;
+                -webkit-text-stroke: 0.5px #fff;
+              }
+            h2 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+                color: aliceblue;
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+            }
+            button {
+                flex: 1 1 auto;
+                width: 170px;
+                height: 40px;
+                font-size: 10px;
+                font-family: 'Francois One', sans-serif;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+                transition: 0.5s;
+                background-size: 200% auto;
+                color:black;
+                border-color:rgb(199, 227, 227);
+                box-shadow: 0 0 5px rgb(220, 220, 220);
+                border-radius: 10px;
+                background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);            }
+            button:hover {
+                background-position: right center; /* change the direction of the change here */
+              }
+            
+            table {
+                border-radius: 4px;
+                border-color: transparent;
+                border-collapse:separate;
+                box-sizing:content-box;
+                border-spacing: 1px;
+                width: 800px;
+            }
+            
+            .semester th {
+                text-align: center;
+                font-family: 'Francois One', sans-serif;
+                text-decoration: bold;
+                width: 80px;
+                border-radius: 2px;
+                font-size: 20px;
+                color: rgb(255, 217, 229);
+                background-color: rgb(7, 7, 7);
+            }
+            .semester td {
+                text-align: center;
+                font-size: 16px;
+                font-family: 'Fira Sans', sans-serif;
+                color: rgb(7, 7, 7);
+                background-color: rgb(255, 233, 240);
+            }
+            .faculty th {
+                text-align: center;
+                font-family: 'Francois One', sans-serif;
+                text-decoration: bold;
+                width: 80px;
+                height: 40px;
+                border-radius: 2px;
+                font-size: 18px;
+                color: rgb(208, 225, 255);
+                background-color: rgb(7, 7, 7);
+            }
+            .faculty td {
+                text-align: center;
+                font-size: 15px;
+                height: 34px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                color: rgb(7, 7, 7);
+                background-color: rgb(222, 234, 255);
+            }
+
+        </style>
+    </head>
+    <body>
+    <center>
+        <h1>TIBBLES</h1>
+        <div class="buttons">
+            <div align="left"><a href="/home/"><button> Go Back </button></a></div>
+            <div align="right"><a href="{% url 'pdf_view' %}"><button> Download as PDF </button></a></div>
+            <div align="center"><a href="{% url 'export_to_excel' %}"><button>Download as Excel</button></a></div>
+        </div>
+        <h2>Timetable for 3rd sem and 5th sem AIML department</h2>
+        </hr>
+        <h2>3rd semester</h2>
+        <br>
+        <table class ="semester" border = "1.5">
+            <tr style="height:50px">
+                <th>DAY</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr >
+            {% for displaydata in displaydata3%}
+            <tr style="height:50px">
+                <td><b>{{displaydata.0}}</b></td>
+                <td>{{displaydata.1}}</td>
+                <td>{{displaydata.2}}</td>
+                <td>{{displaydata.3}}</td>
+                <td>{{displaydata.4}}</td> 
+                <td>{{displaydata.5}}</td>  
+                <td>{{displaydata.6}}</td> 
+                <td>{{displaydata.7}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <br>
+        <table class="faculty" border = "1.5">
+            <tr >
+                <th>SUBJECT</th>
+                <th>SUBJECT CODE</th>
+                <th>FACULTY</th>
+            </tr>
+            {% for displaydata in displaydata7%}
+            <tr >
+                <td>{{displaydata.0}}</td>
+                <td>{{displaydata.1}}</td>
+                <td>{{displaydata.2}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </hr>
+        <br>
+        <br>
+        <h2>5th semester</h2>
+        <br>
+        <table class="semester" border = "1.5">
+            <tr style="height:50px">
+                <th>Day</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+            {% for displaydata in displaydata5%}
+            <tr style="height:50px">
+                <td><b>{{displaydata.0}}</b></td>
+                <td>{{displaydata.1}}</td>
+                <td>{{displaydata.2}}</td>
+                <td>{{displaydata.3}}</td>
+                <td>{{displaydata.4}}</td> 
+                <td>{{displaydata.5}}</td>  
+                <td>{{displaydata.6}}</td> 
+                <td>{{displaydata.7}}</td> 
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <br>
+        <table class="faculty" border = "1.5">
+            <tr >
+                <th>SUBJECT</th>
+                <th>SUBJECT CODE</th>
+                <th>FACULTY</th>
+            </tr>
+            {% for displaydata in displaydata9%}
+            <tr >
+                <td>{{displaydata.0}}</td>
+                <td>{{displaydata.1}}</td>
+                <td>{{displaydata.2}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+    </body>
+</html>

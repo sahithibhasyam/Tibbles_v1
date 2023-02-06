@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Subject</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Fira+Sans&family=Francois+One&family=Montserrat:wght@500;900&family=Space+Mono:wght@700&display=swap');                
+        body {
+                padding-top: 10px;
+                background-color: black;
+                color: aliceblue;
+                background-image: url('/static/4.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        form {
+                width: 400px;
+                background-color: rgba(255,255,255,0.13);
+                position: absolute;
+                justify-content: center;
+                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                border-radius: 15px;
+                backdrop-filter: blur(0.5px);
+                border: 2px solid rgba(255,255,255,0.1);
+                box-shadow: 0 0 10px rgba(8,7,16,0.2);
+                padding: 30px 35px;
+            }
+      form * {
+                color: #ffffff;
+                letter-spacing: 1px;
+                outline: none;
+                border: none;
+            }
+    form h3 {
+                font-family: 'Montserrat',sans-serif;
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 42px;
+                text-align: center;
+            }
+    label {
+                font-family: 'Space Mono', monospace;
+                display: block;
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+    input {
+            font-family: 'Space Mono', monospace;
+            display: block;
+            height: 30px;
+            width: 100%;
+            background-color: rgba(255,255,255,0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 4px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+    ::placeholder {
+            color: #e5e5e5;
+        }
+    
+    button {
+            flex: 1 1 auto;
+            width: 170px;
+            height: 40px;
+            font-size: 10px;
+            font-family: 'Francois One', sans-serif;
+            font-weight: 500;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color:black;
+            border-color:rgb(199, 227, 227);
+            box-shadow: 0 0 5px rgb(220, 220, 220);
+            border-radius: 10px;
+            background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+        }
+    button:hover {
+            background-position: right center; /* change the direction of the change here */
+        }
+    </style>
+</head>
+<body>
+    <div align="left"><a href="/subject/"><button> Go Back </button></a></div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="username">Subject Code: </label>
+        <input type="text" name="subject_code"> <br>
+        <label for="dept">Department No: </label>
+        <input type="text" name="dno"> <br>
+        <label for="name">Subject Name: </label>
+        <input type="text" name="subject_name"> <br>
+        <label for="dept">Semester: </label>
+        <input type="text" name="semester"> <br>
+        <label for="text">Hours Per Week: </label>
+        <input type="password" name="hpw"> <br>
+        <button type="submit"> Submit </button>
+    </form>
+</body>
+</html>

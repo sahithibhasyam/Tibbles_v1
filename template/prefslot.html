@@ -1,0 +1,329 @@
+{% extends 'sidenav.html' %}
+{% block body %}
+        <h3> Please enter your Slot Preferences</h3>
+        {% for message in messages %}
+        <div align="center">
+            <section style="width:300px" class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                {{ message }}
+            </section>
+        </div>
+        {% endfor %}
+        <button style="width:300px"><a style="text-decoration: none" href="/viewslotpref/"> View Your Preferences </a></button>
+        <br>
+
+        <h5>
+            <ul style="text-align: left">
+                <li>Select the dropdown list to choose your slot preferences.</li>
+                <li>The table below gives you the description of the start time and end time of each slots.</li>
+                <li>You can view your preferences by clicking the button above.</li>
+                <li>It also allows you to delete your preferences.</li>
+            </ul>
+        </h5>
+        <div>
+            <table>
+                <tr>
+                    <th> Slot No </th>
+                    <th> Description </th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>For no preference/don't have any other free slots</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>8:30AM to 9:25AM</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>9:25AM to 10:20AM</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>10:35AM to 11:30AM</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>11:30AM to 12:25PM</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>1:15PM to 2:10PM</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>2:10PM to 3:05PM</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>3:05PM to 4:00PM</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>8:30AM to 10:20AM</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10:35AM to 12:25PM</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>1:15PM to 3:05PM</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>2:05PM to 4:00PM</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>1:15PM to 4:00PM</td>
+                </tr>
+            </table>
+        </div>
+    <div class="select_component">
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div style="display:inline-block">
+        <h5 style="display:inline-block"> MONDAY </h5>
+        <select id="sub" name="mon1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="mon2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="mon3">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </div>
+    <div style="display:inline-block">
+        <h5 style="display:inline-block"> TUESDAY </h5>
+        <select id="sub" name="tues1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="tues2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="tues3">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </div>
+    <div style="display:inline-block">
+        <h5 style="display:inline-block"> WEDNESDAY </h5>
+        <select id="sub" name="wed1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="wed2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="wed3">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </div>
+    <div style="display:inline-block">
+        <h5 style="display:inline-block"> THURSDAY </h5>
+        <select id="sub" name="thurs1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="thurs2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="thurs3">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </div>
+    <div style="display:inline-block">
+        <h5 style="display:inline-block"> FRIDAY </h5>
+        <select id="sub" name="fri1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="fri2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="sub" name="fri3">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </div>
+        <br>
+        <button type="submit"> Submit </button><br>
+    </form>
+</div>
+{% endblock body %}
